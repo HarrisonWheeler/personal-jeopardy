@@ -9,6 +9,7 @@ function drawPlayers() {
 
 function drawActivePlayer() {
   document.getElementById('active-player').innerHTML = ProxyState.activePlayer.name
+  document.getElementById('player-details-slot').innerHTML = ProxyState.activePlayer.PlayerDetailTemplate
 }
 
 export class PlayersController {

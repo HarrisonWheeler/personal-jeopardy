@@ -9,6 +9,25 @@ export class Player {
   }
 
   get Template() {
-    return /*html*/ `<div class="col-12 selectable" onclick="app.playersController.setActivePlayer('${this.id}')">${this.name} Score: ${this.points}</div>`
+    return /*html*/ `<div class="col-12 selectable" data-bs-target="#player-offcanvas" data-bs-toggle="offcanvas" onclick="app.playersController.setActivePlayer('${this.id}')">${this.name} Score: ${this.points}</div>`
+  }
+
+  get PlayerDetailTemplate() {
+    return /*html*/ `
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel" id="offcanvas-title">${this.name}'s Details!</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="row">
+        <div class="col-12">
+          <h3>${this.name}</h3>
+          <h6>Questions Answered: ${this.questions}</h6>
+          <h6>Correct: ${this.correct}</h6>
+          <h6>Incorrect: ${this.incorrect}</h6>
+        </div>
+      </div>
+    </div>
+    `
   }
 }
