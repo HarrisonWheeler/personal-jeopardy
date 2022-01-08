@@ -6,6 +6,6 @@ export const jeopardyApi = axios.create({
 })
 
 export const sandboxApi = axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api',
+  baseURL: 'https://jeoparty-server.herokuapp.com/api',
   timeout: 8000
 })
