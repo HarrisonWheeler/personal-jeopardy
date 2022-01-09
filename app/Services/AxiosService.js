@@ -7,8 +7,5 @@ export const jeopardyApi = axios.create({
 
 export const sandboxApi = axios.create({
   baseURL: 'https://jeoparty-server.herokuapp.com/api',
-  timeout: 8000,
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-  })
+  timeout: 8000
 })
