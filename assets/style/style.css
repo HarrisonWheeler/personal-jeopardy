@@ -7,3 +7,14 @@
 .max-width{
   min-width: 80vw;
 }
+
+@media only screen and (max-width: 568px) {
+  .max-height{
+    min-height: 50vh;
+  }
+}
+
+.dropdown-overflow{
+  max-height: 10vh;
+  overflow-y: auto;
+}

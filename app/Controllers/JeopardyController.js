@@ -7,6 +7,10 @@ function drawQuestion() {
   document.getElementById('question').innerHTML = template
 }
 
+// function drawCategories() {
+//   document.getElementById('categories').innerHTML = `<li><a class="dropdown-item" href="#">Sports</a></li>`
+// }
+
 export class JeopardyController {
   constructor() {
     ProxyState.on('questions', drawQuestion)

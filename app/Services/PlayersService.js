@@ -25,7 +25,7 @@ class PlayersService {
   async editPlayer() {
     const res = await sandboxApi.put(`players/${ProxyState.activePlayer.id}`, ProxyState.activePlayer)
     let foundPlayerIndex = ProxyState.players.findIndex(p => p.id == ProxyState.activePlayer.id)
-    ProxyState.players.splice(foundPlayerIndex, 1, ProxyState.activePlayer)
+    ProxyState.players.splice(foundPlayerIndex, 1, new Player(res.data))
     ProxyState.players = ProxyState.players
   }
 }
