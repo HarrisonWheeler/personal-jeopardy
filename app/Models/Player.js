@@ -9,7 +9,8 @@ export class Player {
   }
 
   get Template() {
-    return /*html*/ `<div class="col-12 selectable" data-bs-target="#player-offcanvas" data-bs-toggle="offcanvas" onclick="app.playersController.setActivePlayer('${this.id}')">${this.name} Score: ${this.points}</div>`
+    return /*html*/ `<div class="col-12 selectable" data-bs-target="#player-offcanvas" data-bs-toggle="offcanvas" onclick="app.playersController.setActivePlayer('${this.id}')">
+    <h6>${this.name}</h6> - <span>Score: ${this.points}</span></div>`
   }
 
   get PlayerDetailTemplate() {
